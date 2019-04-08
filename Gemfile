@@ -51,3 +51,5 @@ gem "active_model_serializers", "~> 0.10.7"
 gem 'ebay-finding-api'
 
 gem 'rb-readline'
+
+gem 'stripe'
