@@ -53,3 +53,4 @@ gem 'ebay-finding-api'
 gem 'rb-readline'
 
 gem 'stripe'
+gem 'dotenv'

@@ -1,10 +1,11 @@
+require 'dotenv/load'
 
 class Api::V1::PaymentController < ApplicationController
     skip_before_action :authorized, only: %i[payment]
 
 
 def payment
-    Stripe.api_key = 'sk_test_WfyBeqgVHRFSUAcEzbJemxUp00LS98YawS'
+    Stripe.api_key = ENV["API_KEY"]
     token = params[:stripeToken]
 
     @charge = Stripe::Charge.create({
