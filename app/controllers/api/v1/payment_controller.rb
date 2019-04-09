@@ -8,12 +8,11 @@ def payment
     token = params[:stripeToken]
 
     @charge = Stripe::Charge.create({
-        amount: (params[:amount].to_i)*100,
+        amount: ((params[:amount].to_f).ceil)*100,
         currency: 'usd',
         description: 'Example charge',
         source: token,
     })
-    puts @charge
     render json: @charge
 end
 
