@@ -54,3 +54,5 @@ gem 'rb-readline'
 
 gem 'stripe'
 gem 'dotenv'
+
+gem 'actionmailer'
