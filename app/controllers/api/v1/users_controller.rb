@@ -33,7 +33,14 @@ class Api::V1::UsersController < ApplicationController
         id = JWT.decode(without[1], ENV["SECRET_KEY"])[0]["user_id"]
         @user = User.find(id)
         render json: {user: UserSerializer.new(@user)}
+    end
+
+    def destroy
+      @user=User.find(params[:id])
+      if @user.valid?
+        @user.destroy
       end
+    end
 
   private
 
