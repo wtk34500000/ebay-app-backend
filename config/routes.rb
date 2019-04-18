@@ -15,7 +15,6 @@ Rails.application.routes.draw do
       post '/orders', to: 'orders#create'
       get '/orders', to: 'orders#index'
       post '/donate', to: 'payment#payment'
-      # get '/profile', to: 'users#profile'
     end
   end
 

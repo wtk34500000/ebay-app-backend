@@ -1,7 +1,7 @@
 require 'dotenv/load'
 
 class Api::V1::PaymentController < ApplicationController
-    skip_before_action :authorized, only: %i[payment]
+    # skip_before_action :authorized, only: %i[payment]
 
 
 def payment
