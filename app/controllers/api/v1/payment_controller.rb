@@ -13,7 +13,7 @@ def payment
         amount: ((params[:amount].to_f).ceil)*100,
         currency: 'usd',
         description: 'Example charge',
-        source: token,
+        source: token
     })
 
     name =@charge["billing_details"]["name"]
